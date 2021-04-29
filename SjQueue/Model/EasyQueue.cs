@@ -36,9 +36,18 @@ namespace SjQueue.Model
 
         public T Dequeue()
         {
-            var item = Head;
-            items.Remove(item);
-            return item;
+            if (Count != 0)
+            {
+                var item = Head;
+                items.Remove(item);
+                return item;
+            }
+            else throw new NullReferenceException("Collection is empty");
+        }
+
+        public T Peek()
+        {
+            return Head;
         }
 
     }
