@@ -34,5 +34,12 @@ namespace SjQueue.Model
             items = result;
         }
 
+        public T Dequeue()
+        {
+            var item = Head;
+            items.Remove(item);
+            return item;
+        }
+
     }
 }
