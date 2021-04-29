@@ -6,16 +6,16 @@ using System.Linq;
 
 namespace SjQueue.Model
 {
-    class EasyQueue<T>
+    class ArrayQueque<T>
     {
         private List<T> items = new List<T>();
         private T Head => items.Last();
         private T Tail => items.First();
         public int Count => items.Count;
 
-        public EasyQueue() { }
+        public ArrayQueque() { }
 
-        public EasyQueue(T data)
+        public ArrayQueque(T data)
         {
             items.Add(data);
         }
