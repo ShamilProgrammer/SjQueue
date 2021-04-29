@@ -64,7 +64,9 @@ namespace SjQueue.Model
 
         public T Peek()
         {
-            return Head; 
+            if (Count > 0)
+                return Head;
+            throw new ArgumentOutOfRangeException(nameof(Count), "Count < 1");
         }
 
 
