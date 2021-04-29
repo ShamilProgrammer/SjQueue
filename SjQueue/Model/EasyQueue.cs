@@ -20,7 +20,19 @@ namespace SjQueue.Model
             items.Add(data);
         }
 
+        public void Enqueue(T data)
+        {
+            List<T> result = new List<T>();
 
+            result.Add(data);
+
+            foreach(T item in items)
+            {
+                result.Add(item);
+            }
+
+            items = result;
+        }
 
     }
 }
