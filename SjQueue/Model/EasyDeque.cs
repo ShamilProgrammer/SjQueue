@@ -33,22 +33,30 @@ namespace SjQueue.Model
 
         public T PopBack()
         {
-            T item = Tail;
-            items.Remove(item);
-            return item;
+            if (Count != 0)
+            {
+                T item = Tail;
+                items.Remove(item);
+                return item;
+            }
+            else throw new ArgumentOutOfRangeException(nameof(Count), "Count <= 0");
         }
 
-        public T PopFront(T data)
+        public T PopFront()
         {
-            T item = Head;
+            if (Count != 0)
+            {
+                T item = Head;
 
-            List<T> temp = (((IEnumerable<T>)items).Reverse()).ToList();
+                List<T> temp = (((IEnumerable<T>)items).Reverse()).ToList();
 
-            temp.Remove(item);
+                temp.Remove(item);
 
-            items = temp.Reverse<T>().ToList();
+                items = temp.Reverse<T>().ToList();
 
-            return item;
+                return item;
+            }
+            else throw new ArgumentOutOfRangeException(nameof(Count), "Count <= 0");
         }
 
         public T PeekBack()

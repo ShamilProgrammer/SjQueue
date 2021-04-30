@@ -40,16 +40,38 @@ namespace SjQueue
             // OTHER 
 
 
-            var linkedqueue = new Model.LinkedQueue<int>();
+            //var linkedqueue = new Model.LinkedQueue<int>();
 
-            linkedqueue.Enqueue(5);
-
-
-            Console.WriteLine(linkedqueue.Dequeue());
-            Console.WriteLine(linkedqueue.Peek());
-            Console.WriteLine(linkedqueue.Dequeue());
+            //linkedqueue.Enqueue(5);
 
 
+            //Console.WriteLine(linkedqueue.Dequeue());
+            //Console.WriteLine(linkedqueue.Peek());
+            //Console.WriteLine(linkedqueue.Dequeue());
+
+
+            // OTHER 
+
+
+            var easyDeque = new Model.EasyDeque<int>();
+
+            easyDeque.PushFront(1);
+            easyDeque.PushFront(2);
+            easyDeque.PushFront(3);
+            easyDeque.PushBack(40);
+            easyDeque.PushBack(50);
+            easyDeque.PushBack(600);
+            easyDeque.PushBack(700);
+
+
+            Console.WriteLine(easyDeque.PopFront());
+            Console.WriteLine(easyDeque.PopBack());
+            Console.WriteLine(easyDeque.PopFront());
+            Console.WriteLine(easyDeque.PopBack());
+
+            Console.ReadLine();
+
+            // OTHER 
         }
     }
 }
