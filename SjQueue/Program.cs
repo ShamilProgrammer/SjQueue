@@ -23,19 +23,31 @@ namespace SjQueue
             // OTHER 
 
 
-            var arrayqueue = new Model.ArrayQueque<int>();
+            //var arrayqueue = new Model.ArrayQueque<int>();
 
-            arrayqueue.Enqueue(1);
-            arrayqueue.Enqueue(2);
-            arrayqueue.Enqueue(3);
-            arrayqueue.Enqueue(4);
-            arrayqueue.Enqueue(5);
+            //arrayqueue.Enqueue(1);
+            //arrayqueue.Enqueue(2);
+            //arrayqueue.Enqueue(3);
+            //arrayqueue.Enqueue(4);
+            //arrayqueue.Enqueue(5);
 
 
-            Console.WriteLine(arrayqueue.Dequeue());
-            Console.WriteLine(arrayqueue.Peek());
-            Console.WriteLine(arrayqueue.Dequeue());
+            //Console.WriteLine(arrayqueue.Dequeue());
+            //Console.WriteLine(arrayqueue.Peek());
+            //Console.WriteLine(arrayqueue.Dequeue());
 
+
+            // OTHER 
+
+
+            var linkedqueue = new Model.LinkedQueue<int>();
+
+            linkedqueue.Enqueue(5);
+
+
+            Console.WriteLine(linkedqueue.Dequeue());
+            Console.WriteLine(linkedqueue.Peek());
+            Console.WriteLine(linkedqueue.Dequeue());
 
 
         }

@@ -46,6 +46,15 @@ namespace SjQueue.Model
 
         public T Dequeue()
         {
+            if (Count == 1)
+            {
+                T returnValue = head.Data;
+                head = null;
+                tail = null;
+                Count = 0;
+                return returnValue;
+            }
+
             var data = head.Data;
 
             var current = tail.Next;
@@ -64,9 +73,18 @@ namespace SjQueue.Model
             return data;
         }
 
+
+
         public T Peek()
         {
-            return head.Data;
+            if (Count > 0)
+            {
+                return head.Data;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException(nameof(Count), "Count <= 0");
+            }
         }
     }
 }
