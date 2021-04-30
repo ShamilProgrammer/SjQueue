@@ -53,25 +53,49 @@ namespace SjQueue
             // OTHER 
 
 
-            var easyDeque = new Model.EasyDeque<int>();
+            //var easyDeque = new Model.EasyDeque<int>();
 
-            easyDeque.PushFront(1);
-            easyDeque.PushFront(2);
-            easyDeque.PushFront(3);
-            easyDeque.PushBack(40);
-            easyDeque.PushBack(50);
-            easyDeque.PushBack(600);
-            easyDeque.PushBack(700);
+            //easyDeque.PushFront(1);
+            //easyDeque.PushFront(1);
+            //easyDeque.PushFront(2);
+            //easyDeque.PushFront(3);
+            //easyDeque.PushFront(1);
 
 
-            Console.WriteLine(easyDeque.PopFront());
-            Console.WriteLine(easyDeque.PopBack());
-            Console.WriteLine(easyDeque.PopFront());
-            Console.WriteLine(easyDeque.PopBack());
+
+            //Console.WriteLine(easyDeque.PopFront());
+            //Console.WriteLine(easyDeque.PopFront());
+            //Console.WriteLine(easyDeque.PopFront());
+            //Console.WriteLine(easyDeque.PopFront());
+            //Console.WriteLine(easyDeque.PopFront());
+            //Console.WriteLine(easyDeque.PopFront());
+
+
+            //Console.ReadLine();
+
+            // OTHER 
+
+            // OTHER 
+
+
+            var duplexDeque = new Model.DuplexLinkedDeque<int>();
+
+            duplexDeque.PushFront(1);
+            duplexDeque.PushFront(2);
+            duplexDeque.PushFront(3);
+            duplexDeque.PushBack(4);
+            duplexDeque.PushBack(5);
+
+            Console.WriteLine(duplexDeque.PopFront()); 
+            Console.WriteLine(duplexDeque.PopFront());
+            Console.WriteLine(duplexDeque.PopBack());
+            Console.WriteLine(duplexDeque.PopBack());
+            Console.WriteLine(duplexDeque.PopFront());
+            Console.WriteLine(duplexDeque.PopFront());
+
 
             Console.ReadLine();
 
-            // OTHER 
         }
     }
 }
